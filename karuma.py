@@ -1,24 +1,30 @@
-import time
-from os import system, name
-import sys
 import os
+import sys
+import time
+from os import name, system
+
 sys.tracebacklimit = 0
 import subprocess
+
 try:
     import discord
 except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", 'discord.py'])
+import json
+
 import discord
 from discord.ext import commands
-import json
+
 try:
     import colorama
 except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", 'colorama'])
-from colorama import Fore, init, Style
-from datetime import datetime
 import asyncio
 import time
+from datetime import datetime
+
+from colorama import Fore, Style, init
+
 try:
     import pyfade
 except ImportError:
